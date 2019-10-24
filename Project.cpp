@@ -10,6 +10,7 @@ using namespace std;
 char name[30];
 char section[20];
 int id;
+int x;
 
 int main()
 {
@@ -27,12 +28,30 @@ int main()
 	gotoxy(71,10); cout << "Welcome! " << name;
 	gotoxy(71,11); cout << "From Section " << section;
 	gotoxy(71,12); cout << "Student ID: " << id;
+	
+	for(x = 0; x < 3; x++)
+	{
+	system("color 0A"); gotoxy(10, 40); cout << " |  \b\b\b ";
+	Sleep(200);			gotoxy(10, 39); cout << " |  \b\b\b ";
+	system("color 0B"); gotoxy(10, 38); cout << " |  \b\b\b ";
+	Sleep(200);			gotoxy(10, 37); cout << " |  \b\b\b ";
+	system("color 0C");	gotoxy(10, 36); cout << " |  \b\b\b ";
+	Sleep(200);			gotoxy(10, 35); cout << " |  \b\b\b ";
+	system("color 0D"); gotoxy(10, 34); cout << " |  \b\b\b ";
+	Sleep(200);			gotoxy(10, 33); cout << " |  \b\b\b ";
+	system("color 0E"); gotoxy(10, 32); cout << " |  \b\b\b ";
+	Sleep(200);			gotoxy(10, 31); cout << " |  \b\b\b ";
+	system("color 0F"); gotoxy(10, 30); cout << " |  \b\b\b ";
+	Sleep(200);			gotoxy(10, 29); cout << " |  \b\b\b ";
+	}
+	
 	Sleep(3000);
 	system("cls");
 	
 	canvasWithInfo();
 	gotoxy(51, 11); cout << "You have enrolled into an online course called Computer Programming 1.";
 	gotoxy(56, 12); cout << "It is a course that is mainly dealing with the basics of C++";
+	gotoxy(65, 13); cout << "This course comes with the following modules: ";
 	
 	
 	
