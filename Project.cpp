@@ -31,7 +31,7 @@ int main()
 	system("cls");
 	
 	canvasWithInfo();
-	gotoxy(52, 11); cout << "You have enrolled into an online course called Computer Programming 1.";
+	gotoxy(51, 11); cout << "You have enrolled into an online course called Computer Programming 1.";
 	gotoxy(56, 12); cout << "It is a course that is mainly dealing with the basics of C++";
 	
 	
@@ -69,7 +69,14 @@ void canvasWithInfo()
 	gotoxy(50, 5); cout << "**********"; gotoxy(62, 5); cout << "****  ****"; gotoxy(74, 5); cout << "***   ****"; gotoxy(85, 5); cout << "  **  **  "; gotoxy(96, 5); cout << "****  ****"; gotoxy(108, 5); cout << "     *****";	
 	gotoxy(50, 6); cout << "**********"; gotoxy(62, 6); cout << "****  ****"; gotoxy(74, 6); cout << "***    ***"; gotoxy(85, 6); cout << "    **    "; gotoxy(96, 6); cout << "****  ****"; gotoxy(108, 6); cout << "**********";
 	
-	gotoxy(0, 0); cout << "User: " << name;
-	gotoxy(0, 1); cout << "Student ID: " << id;
-	gotoxy(0, 2); cout << "Section: " << section;
+	gotoxy(0, 0); cout << " ========================== ";
+	gotoxy(0, 1); cout << "|                          | ";
+	gotoxy(0, 2); cout << "|                          | ";
+	gotoxy(0, 3); cout << "|                          | ";
+	gotoxy(0, 4); cout << " ========================== ";
+	
+	
+	gotoxy(1, 1); cout << "User: " << name;
+	gotoxy(1, 2); cout << "Student ID: " << id;
+	gotoxy(1, 3); cout << "Section: " << section;
 }
