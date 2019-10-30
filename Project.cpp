@@ -4,6 +4,7 @@
 void gotoxy(short x, short y);
 void canvas();
 void canvasWithInfo();
+void tablecontents();
 
 using namespace std;
 
@@ -53,6 +54,7 @@ int main()
 	gotoxy(56, 12); cout << "It is a course that is mainly dealing with the basics of C++";
 	gotoxy(65, 13); cout << "This course comes with the following modules: ";
 	
+	tablecontents();
 	
 	
 	
@@ -98,4 +100,30 @@ void canvasWithInfo()
 	gotoxy(1, 1); cout << "User: " << name;
 	gotoxy(1, 2); cout << "Student ID: " << id;
 	gotoxy(1, 3); cout << "Section: " << section;
+}
+
+void tablecontents()
+{
+
+	gotoxy(35,15);cout << "***    ***";  gotoxy(47,15);cout << "**********";  gotoxy(59,15);cout << "**********";  gotoxy(71,15);cout << "**********";  gotoxy(83,15);cout << "**********";  gotoxy(95,15);cout << "***********";  gotoxy(108,15);cout << "****   ****";    gotoxy(121,15);cout << "**********";
+	gotoxy(35,16);cout << "****  ****";  gotoxy(47,16);cout << "**********";  gotoxy(59,16);cout << "**********";  gotoxy(71,16);cout << "**********";  gotoxy(83,16);cout << "**********";  gotoxy(95,16);cout << "****   ****";  gotoxy(108,16);cout << "****   ****";    gotoxy(121,16);cout << "***   ****";
+	gotoxy(35,17);cout << "**********";  gotoxy(47,17);cout << "****  ****";  gotoxy(59,17);cout << "*****     ";  gotoxy(71,17);cout << "    **    ";  gotoxy(83,17);cout << "**        ";  gotoxy(95,17);cout << "****   *** ";  gotoxy(108,17);cout << "***** *****";    gotoxy(121,17);cout << "   *******";
+	gotoxy(35,18);cout << "*** ** ***";  gotoxy(47,18);cout << "**********";  gotoxy(59,18);cout << "**********";  gotoxy(71,18);cout << "    **    ";  gotoxy(83,18);cout << "******    ";  gotoxy(95,18);cout << "****  ***  ";  gotoxy(108,18);cout << " **** **** ";    gotoxy(121,18);cout << "   *****  ";
+	gotoxy(35,19);cout << "*** ** ***";  gotoxy(47,19);cout << "**********";  gotoxy(59,19);cout << "**********";  gotoxy(71,19);cout << "    **    ";  gotoxy(83,19);cout << "**        ";  gotoxy(95,19);cout << "**** **    ";  gotoxy(108,19);cout << "   ** **   ";    gotoxy(121,19);cout << "      ****";
+	gotoxy(35,20);cout << "*** ** ***";  gotoxy(47,20);cout << "****  ****";  gotoxy(59,20);cout << "     *****";  gotoxy(71,20);cout << "    **	";  gotoxy(83,20);cout << "**********";  gotoxy(95,20);cout << "**** ****  ";  gotoxy(108,20);cout << "    ***    ";    gotoxy(121,20);cout << "***   ****";
+	gotoxy(35,21);cout << "*** ** ***";  gotoxy(47,21);cout << "****  ****";  gotoxy(59,21);cout << "**********";  gotoxy(71,21);cout << "    **    ";  gotoxy(83,21);cout << "**********";  gotoxy(95,21);cout << "**** ******";  gotoxy(108,21);cout << "    ***    ";    gotoxy(121,21);cout << "**********";
+	
+	gotoxy(50,22);cout<<"  ____________________________________________________________";
+	gotoxy(51,23);cout<<"| Chapter 1 - Introduction to Programming                     |";
+	gotoxy(52,24);cout<<"|                                                             |";
+	gotoxy(53,25);cout<<"| Chapter 2 - Program Logic Design and Formulation            |";
+	gotoxy(54,26);cout<<"|                                                             |";
+	gotoxy(55,27);cout<<"| Chapter 3 - Introduction to C++ Programming                 |";
+	gotoxy(56,28);cout<<"|                                                             |";
+	gotoxy(57,29);cout<<"| Chapter 4 - Basic Input/Output System                       |";
+	gotoxy(58,30);cout<<"|                                                             |";
+	gotoxy(59,31);cout<<"| Chapter 5 - Program Control: Conditional Control Structures |";
+	gotoxy(60,32);cout<<"|                                                             |";
+	gotoxy(61,33);cout<<"| Chapter 6 - Program Control: Repetition Control Structures  |";
+	gotoxy(62,34);cout<<"|_____________________________________________________________|";
 }
