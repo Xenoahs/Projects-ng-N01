@@ -1,2 +1,3 @@
 # ComProgProj
-Project Natin sa Com Prog
+
+Github para sa mga kalokohan nila Charles, Earl, Genesis, at ni Osmon
