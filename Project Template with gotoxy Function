@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void gotoxy(short x, short y);
+
+int main()
+{
+
+}
+
+void gotoxy(short x, short y) //gotoxy function
+{
+
+	COORD pos = {x, y};
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	
+}
+
+void maximizeWindow(){ //Maximize Window
+    HWND hwnd = GetConsoleWindow();
+    ShowWindow(hwnd, SW_SHOWMAXIMIZED);
+
