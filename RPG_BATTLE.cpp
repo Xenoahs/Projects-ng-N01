@@ -1,3 +1,14 @@
+/* This is a group project between 	that is part of a bigger project (Text Based RPG)
+		Charles
+		Earl
+		Genesis
+		Justin
+		Sean
+
+   Name of Project: RPG Battle System
+   Date Started: 06/11/2019 	Date Finished: ???
+ */
+
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
