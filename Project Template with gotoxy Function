@@ -2,19 +2,21 @@
 
 using namespace std;
 
-void gotoxy(short x, short y);
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+COORD CursorPosition;
+
+void gotoxy(int,int);
 
 int main()
 {
 
 }
 
-void gotoxy(short x, short y) //gotoxy function
-{
-
-	COORD pos = {x, y};
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-	
+void gotoxy(int x, int y) 
+{ 
+	CursorPosition.X = x; 
+	CursorPosition.Y = y; 
+	SetConsoleCursorPosition(console,CursorPosition); 
 }
 
 void maximizeWindow(){ //Maximize Window
