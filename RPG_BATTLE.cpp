@@ -32,6 +32,7 @@ int HP = 100, eHP = 100;
 int mana = 100, eMana = 100;
 int armor, eArmor;
 bool running = true;
+int damage, criticalChance, criticalStrike = 2;
 
 int main()
 {
@@ -55,8 +56,30 @@ void gotoxy(int x, int y)
 
 void info()
 {
-	gotoxy(5, 3); cout << "Enemy HP: " << eHP;
-	gotoxy(5, 4); cout << "Enemy Mana: " << eMana;
+		if(eHP >= 75 && eHP <= 100)
+		{
+			SetConsoleTextAttribute(h, 2);
+			gotoxy(5, 3); cout << "Enemy HP: " << eHP;
+			SetConsoleTextAttribute(h, 15);
+		}
+		else if(eHP >= 50 && eHP <= 75)
+		{
+			SetConsoleTextAttribute(h, FOREGROUND_RED | FOREGROUND_GREEN);
+			gotoxy(5, 3); cout << "Enemy HP: " << eHP;
+			SetConsoleTextAttribute(h, 15);
+		}
+		else if(eHP >= 0 && eHP <= 50)
+		{
+			SetConsoleTextAttribute(h, 4);
+			gotoxy(5, 3); cout << "Enemy HP: " << eHP;
+			SetConsoleTextAttribute(h, 15);
+		}
+		if(mana >= 0 && mana <= 100)
+		{
+			SetConsoleTextAttribute(h, 1);
+			gotoxy(5, 4); cout << "Enemy Mana: " << eMana;
+			SetConsoleTextAttribute(h, 15);
+		}
 	
 		if(HP >= 75 && HP <= 100)
 		{
@@ -76,8 +99,7 @@ void info()
 			gotoxy(125, 41);cout << "My HP: " << HP;
 			SetConsoleTextAttribute(h, 15);
 		}
-	gotoxy(125, 42); cout << "My Mana: " << mana;
-		if(mana >= 75 && mana <= 100)
+		if(mana >= 0 && mana <= 100)
 		{
 			SetConsoleTextAttribute(h, 1);
 			gotoxy(125, 42); cout << "My Mana: " << mana;
@@ -195,7 +217,19 @@ void menu()
 		case 1: // Sean pakilagay yung Computations ng bawat shit here.
 			{
 				system("cls");
-				gotoxy(30, 30);cout << "You have chosen attack";
+				
+				damage = (rand()%10) + 10;
+				criticalChance = rand()%2;
+					if(criticalChance == 1)
+						{
+							damage *= criticalStrike;
+							gotoxy(30,29);cout << "Critical Hit!";
+						}
+				
+				
+				gotoxy(30, 30); cout << "You have attacked the enemy for " << damage << " damage";
+				
+				eHP -= damage;
 				break;
 			}
 		
