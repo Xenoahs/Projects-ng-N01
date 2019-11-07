@@ -383,7 +383,7 @@ void spellMenu()
 		case 3:
 			{
 				system("cls");
-				damage = (rand()%100) + 90;
+				damage = (rand() % (100 - 90)) + 90;
 				eHP -= damage;
 				HP -= damage;
 				gotoxy(30, 30);cout << "You have chosen spell: SeLF-DeStruCt and inflicted "<< damage<< " damage to the enemy and yourself.";
@@ -394,7 +394,7 @@ void spellMenu()
 		case 4:
 			{
 				system("cls");
-				damage = (rand()%75) + 100;
+				damage = (rand()% (100 - 75)) + 75;
 				eHP -= damage;
 				gotoxy(30, 30);cout << "You have chosen spell: Chaos Destruction and inflicted "<< damage<< " damage.";
 			
