@@ -218,8 +218,8 @@ void menu()
 			{
 				system("cls");
 				
-				damage = (rand()%10) + 10;
-				criticalChance = rand()%2;
+				damage = (rand()%10) + 5;
+				criticalChance = rand()%5;
 					if(criticalChance == 1)
 						{
 							damage *= criticalStrike;
@@ -268,10 +268,10 @@ void spellMenu()
 	
 	info();
 	
-    gotoxy(49, 40); cout << "Spell 1";
-	gotoxy(49, 43); cout << "Spell 2";
-	gotoxy(89, 40); cout << "Spell 3";
-	gotoxy(89, 43); cout << "Spell 4";
+    gotoxy(49, 40); cout << "Fireball";
+	gotoxy(49, 43); cout << "Thunderbolt";
+	gotoxy(89, 40); cout << "SeLF-DeStruCt";
+	gotoxy(89, 43); cout << "Chaos Destruction";
 	gotoxy(95, 43);
 		system("pause>nul");
 	
@@ -361,7 +361,10 @@ void spellMenu()
 		case 1: // Sean pakilagay yung Computations ng bawat shit here.
 			{
 				system("cls");
-				gotoxy(30, 30);cout << "You have chosen spell 1";
+				damage = (rand()%15) + 10;
+				eHP -= damage;
+				gotoxy(30, 30);cout << "You have chosen spell: Fireball and inflicted "<< damage<< " damage.";
+				
 				menu();
 				break;
 			}
@@ -369,7 +372,10 @@ void spellMenu()
 		case 2:
 			{
 				system("cls");
-				gotoxy(30, 30);cout << "You have chosen spell 2";
+				damage = (rand()%15) + 10;
+				eHP -= damage;
+				gotoxy(30, 30);cout << "You have chosen spell: Thunderbolt and inflicted "<< damage<< " damage.";
+				
 				break;
 			}
 			
@@ -377,14 +383,21 @@ void spellMenu()
 		case 3:
 			{
 				system("cls");
-				gotoxy(30, 30);cout << "You have chosen spell 3";
+				damage = (rand()%100) + 90;
+				eHP -= damage;
+				HP -= damage;
+				gotoxy(30, 30);cout << "You have chosen spell: SeLF-DeStruCt and inflicted "<< damage<< " damage to the enemy and yourself.";
+			
 				break;
 			}
 		
 		case 4:
 			{
 				system("cls");
-				gotoxy(30, 30);cout << "You have chosen spell 4";
+				damage = (rand()%75) + 100;
+				eHP -= damage;
+				gotoxy(30, 30);cout << "You have chosen spell: Chaos Destruction and inflicted "<< damage<< " damage.";
+			
 				break;
 			}
 		}
@@ -524,7 +537,3 @@ void inventoryMenu()
 	}
   }
 }
-
-
-
-
