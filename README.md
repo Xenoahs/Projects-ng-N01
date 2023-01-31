@@ -1,3 +1,1 @@
-# Kung ano anong project
-
-Github para sa mga kalokohan nila Charles, Earl, Genesis, Osmon, at ni John
+A Canvas-style tutorial of C++ Programming for the subject Computer Programming 1 using gotoxy functions for a pseudo UI in console.
